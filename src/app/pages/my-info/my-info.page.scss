@@ -1,0 +1,22 @@
+img{  
+    width: 200px;
+    height: 200px;
+    display: block;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+ion-card{   
+    text-align: left;
+    justify-content: center;
+    content: absolute;
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+ion-card-content{
+    text-align: center;
+}
