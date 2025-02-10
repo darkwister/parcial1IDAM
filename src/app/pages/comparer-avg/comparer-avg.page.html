@@ -1,13 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>comparer-avg</ion-title>
+    <ion-title>Comparar y promediar</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">comparer-avg</ion-title>
+      <ion-title size="large">Comparar y promediar</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-input placeholder="Ingrese el primer numero" [(ngModel)]="num1" type="number"></ion-input>
+  <ion-input placeholder="Ingrese el segundo numero" [(ngModel)]="num2" type="number"></ion-input>
+  <ion-input placeholder="Ingrese el tercer numero" [(ngModel)]="num3" type="number"></ion-input>
+  <ion-button (click)="compareNumbers()">Procesar numeros</ion-button>
+  <ion-list>
+    <ion-item>
+          <ion-text *ngIf="lastNum1 != lastNum2 || lastNum2 != lastNum3 || lastNum1 != lastNum3">El mayor de todos los numeros es: {{biggestNumber}}</ion-text>
+          <ion-text *ngIf="lastNum1 == lastNum2 && lastNum2 == lastNum3 && lastNum1 == lastNum3">Los numeros son iguales</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text>El promedio de todos los numeros: {{avg}}</ion-text>
+    </ion-item>
+  </ion-list>
 </ion-content>
